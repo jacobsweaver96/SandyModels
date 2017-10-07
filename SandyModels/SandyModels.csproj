@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Models\ApiModels\ApiResponse.cs" />
     <Compile Include="Models\ApiModels\EndPointItem.cs" />
+    <Compile Include="Models\DataResponse.cs" />
     <Compile Include="Models\GithubUser.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
