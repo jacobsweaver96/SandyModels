@@ -5,14 +5,19 @@ using System.Runtime.Serialization;
 namespace SandyModels.Models.ApiModels
 {
     [DataContract]
-    public class ApiResponse
+    public class ApiResponse<T>
     {
         [DataMember]
-        public HttpStatusCode ResponseCode { get; set; }
+        public T Content { get; set; } = default(T);
         [DataMember]
-        public object Content { get; set; }
-        [DataMember]
-        public string ContentType { get; set; } = "";
+        public List<EndPointItem> EndPointItems { get; set; } = new List<EndPointItem>();
+
+        public ApiResponse() { }
+    }
+
+    [DataContract]
+    public class ApiResponse
+    {
         [DataMember]
         public List<EndPointItem> EndPointItems { get; set; } = new List<EndPointItem>();
 
